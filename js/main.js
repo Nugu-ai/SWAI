@@ -3,16 +3,19 @@
 
     // Back to top button
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
+        if ($(this).scrollTop() > 300) {
+            // 300px 넘어야 버튼 등장
             $(".back-to-top").fadeIn("slow");
         } else {
             $(".back-to-top").fadeOut("slow");
         }
     });
+
     $(".back-to-top").click(function () {
-        $("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
+        $("html, body").animate({ scrollTop: 0 }, 600, "easeInOutExpo"); // 속도 600ms로 줄임
         return false;
     });
+
 })(jQuery);
 
 var queryString = location.search;
